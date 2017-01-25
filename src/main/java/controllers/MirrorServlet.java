@@ -20,7 +20,7 @@ public class MirrorServlet extends HttpServlet {
         Map<String, Object> gg = new HashMap<>();
         String msn = request.getParameter("key");
         gg.put("key", msn == null ? "" : msn);
-        response.getWriter().println(request.getParameter("key")/*PageGenerator.instance().getPage("mirror.html", gg)*/);
+        response.getWriter().println(request.getParameter("key"));
         response.setContentType("text/html;charset=utf-8");
         response.setStatus(HttpServletResponse.SC_OK);
     }
